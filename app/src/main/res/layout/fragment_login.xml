@@ -32,7 +32,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/white"
+                android:background="@color/black"
                 android:layout_marginStart="40dp"/>
             <EditText
                 android:id="@+id/login_password"
@@ -50,7 +50,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/white"
+                android:background="@color/black"
                 android:layout_marginStart="40dp"/>
             <Button
                 android:id="@+id/login_btn"
@@ -70,16 +70,16 @@
                     android:layout_marginTop="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:text="@string/not_registered"
-                    android:layout_marginStart="20dp" />
+                    android:layout_marginStart="20dp"
+                    style="@style/textStyle2" />
                 <TextView
                     android:id="@+id/sign_up_if_not_member"
                     android:layout_marginTop="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
                     android:text="@string/sign_up"
                     android:layout_marginStart="20dp" />
 
