@@ -8,11 +8,13 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginFragment extends Fragment {
     TextView sign_up;
+    Button login;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,6 +28,15 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_signUpFragment2);
+            }
+        });
+
+        // set up login onclick
+        login = view.findViewById(R.id.login_btn);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_home2);
             }
         });
         return view;
