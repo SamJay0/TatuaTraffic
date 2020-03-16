@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.devjay.tatuatraffic.adapters.HomeCollectionAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 
 public class Home extends Fragment {
@@ -31,5 +32,8 @@ public class Home extends Fragment {
         homeCollectionAdapter = new HomeCollectionAdapter(this);
         viewPager = view.findViewById(R.id.pager);
         viewPager.setAdapter(homeCollectionAdapter);
+
+        TabLayout tabLayout = view.findViewById(R.id.tab_layout);
+
     }
 }
