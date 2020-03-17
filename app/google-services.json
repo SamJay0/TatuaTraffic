@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1062918536146",
+    "firebase_url": "https://tatuatraffic.firebaseio.com",
+    "project_id": "tatuatraffic",
+    "storage_bucket": "tatuatraffic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062918536146:android:b16766a9a8442960f0260b",
+        "android_client_info": {
+          "package_name": "com.devjay.tatuatraffic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062918536146-ppjfbi9oop95lpsjjs6ei3m2j0d4j5em.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOzAKXq7ZCBmaMl9ET5P1EouuQn0D_cgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062918536146-ppjfbi9oop95lpsjjs6ei3m2j0d4j5em.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
