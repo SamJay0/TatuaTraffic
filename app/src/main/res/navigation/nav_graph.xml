@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_loginFragment2_to_signUpFragment2"
             app:destination="@id/signUpFragment2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_home2"
+            app:destination="@id/home2" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment2"
@@ -22,4 +25,9 @@
             android:id="@+id/action_signUpFragment2_to_loginFragment2"
             app:destination="@id/loginFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.devjay.tatuatraffic.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

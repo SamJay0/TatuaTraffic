@@ -9,6 +9,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.devjay.tatuatraffic.ChatRoom;
 
 public class HomeCollectionAdapter extends FragmentStateAdapter {
+
+    private static final int HOME_ITEM_SIZE = 2;
     // constructor
     public HomeCollectionAdapter(Fragment fragment){
         super(fragment);
@@ -26,6 +28,6 @@ public class HomeCollectionAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 100;
+        return HOME_ITEM_SIZE;
     }
 }

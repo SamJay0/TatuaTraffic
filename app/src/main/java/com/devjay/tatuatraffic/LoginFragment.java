@@ -36,6 +36,7 @@ public class LoginFragment extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_home2);
             }
         });
         return view;
