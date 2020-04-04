@@ -9,13 +9,18 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpFragment extends Fragment implements View.OnClickListener{
-    TextView login;
+
+    private EditText mEmailField;
+    private EditText mPasswordField;
+    private EditText mConfirmPasswordField;
     private FirebaseAuth mAuth;
 
     @Override
@@ -26,16 +31,17 @@ public class SignUpFragment extends Fragment implements View.OnClickListener{
 
         //onclick on view
         view.findViewById(R.id.login_if_member).setOnClickListener(this);
-        return view;
-    }
+        view.findViewById(R.id.sign_up_btn).setOnClickListener(this);
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        //get views
+        mEmailField =view.findViewById(R.id.sign_up_email);
+        mPasswordField=view.findViewById(R.id.sign_up_pass1);
+        mConfirmPasswordField=view.findViewById(R.id.sign_up_pass2);
 
         //initialise firebase
         mAuth = FirebaseAuth.getInstance();
 
+        return view;
     }
 
     // check user on start
@@ -52,5 +58,12 @@ public class SignUpFragment extends Fragment implements View.OnClickListener{
         if(viewID==R.id.login_if_member){
             Navigation.findNavController(v).navigate(R.id.action_signUpFragment2_to_loginFragment2);
         }
+        else if(viewID==R.id.sign_up_btn){
+            Toast.makeText(getActivity(), "sign up", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void SignUp(){
+
     }
 }

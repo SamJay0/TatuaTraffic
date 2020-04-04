@@ -2,6 +2,7 @@ package com.devjay.tatuatraffic;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -13,7 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
-    TextView sign_up;
+
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,15 +29,17 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         return view;
     }
+
     @Override
     public void onClick(View v) {
         int viewID= v.getId();
         if(viewID==R.id.login_btn){
             Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_home2);
         }
-        if(viewID==R.id.sign_up_if_not_member){
+        else if(viewID==R.id.sign_up_if_not_member){
             Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_signUpFragment2);
         }
 
     }
+
 }

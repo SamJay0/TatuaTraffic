@@ -73,7 +73,7 @@
 
 
         <Button
-            android:id="@+id/_sign_up_if_not_member"
+            android:id="@+id/sign_up_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
