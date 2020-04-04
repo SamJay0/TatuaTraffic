@@ -12,9 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements View.OnClickListener {
     TextView sign_up;
-    Button login;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,23 +21,21 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        // set sign up onclick
-        sign_up = view.findViewById(R.id.sign_up_if_not_member);
-        sign_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_signUpFragment2);
-            }
-        });
+        // set onclick on views
+        view.findViewById(R.id.sign_up_if_not_member).setOnClickListener(this);
+        view.findViewById(R.id.login_btn).setOnClickListener(this);
 
-        // set up login onclick
-        login = view.findViewById(R.id.login_btn);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_home2);
-            }
-        });
         return view;
+    }
+    @Override
+    public void onClick(View v) {
+        int viewID= v.getId();
+        if(viewID==R.id.login_btn){
+            Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_home2);
+        }
+        if(viewID==R.id.sign_up_if_not_member){
+            Navigation.findNavController(v).navigate(R.id.action_loginFragment2_to_signUpFragment2);
+        }
+
     }
 }
