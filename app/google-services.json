@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1062918536146-2b2o812r1qurjiltmrfcm464c9crrv99.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devjay.tatuatraffic",
+            "certificate_hash": "27b8786b82b4acaea45c8cd1b6c7a827289e1368"
+          }
+        },
+        {
           "client_id": "1062918536146-ppjfbi9oop95lpsjjs6ei3m2j0d4j5em.apps.googleusercontent.com",
           "client_type": 3
         }
