@@ -24,14 +24,8 @@ public class SignUpFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
 
-        //login if member
-        login = view.findViewById(R.id.login_if_member);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_signUpFragment2_to_loginFragment2);
-            }
-        });
+        //onclick on view
+        view.findViewById(R.id.login_if_member).setOnClickListener(this);
         return view;
     }
 
